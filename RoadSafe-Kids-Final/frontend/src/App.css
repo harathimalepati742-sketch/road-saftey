@@ -1,0 +1,66 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Poppins,sans-serif;background:#dff6ff;color:#19324d}
+button,input{font:inherit}
+button{cursor:pointer}
+.app{min-height:100vh;background:linear-gradient(180deg,#8ed8ff 0%,#eafaff 45%,#b9e986 45%,#8ed35f 100%)}
+.home,.result-page{display:flex;align-items:center;justify-content:center;padding:25px}
+.hero{text-align:center;width:min(950px,94%);padding-top:25px}
+.hero-badge,.tag{display:inline-block;background:#fff2b8;color:#7b5a00;border-radius:20px;padding:8px 15px;font-weight:bold;font-size:12px;letter-spacing:1px}
+.hero h1{font-size:64px;color:#1261a0;margin:18px 0 5px;text-shadow:2px 3px #fff}
+.hero h1 span{color:#f4a400}
+.hero>p{font-size:20px}
+.hero-road{margin:28px auto;background:#3d3d3d;border-radius:25px;padding:18px;max-width:800px;display:flex;justify-content:space-around;font-size:45px;border:7px solid #777}
+.start-card,.result-card{background:#fff;border-radius:28px;padding:35px;box-shadow:0 15px 40px #0002;margin:auto;max-width:620px}
+.start-card h2{margin-bottom:20px}
+input{width:100%;padding:15px;border:2px solid #cfe8f7;border-radius:14px;margin-bottom:12px;outline:none}
+input:focus{border-color:#2196f3}
+button{border:0;border-radius:25px;padding:14px 24px;background:#1261a0;color:#fff;font-weight:bold;transition:.2s}
+button:hover:not(:disabled){transform:translateY(-2px);background:#0c4778}
+button:disabled{opacity:.6;cursor:not-allowed}
+.start-card>button,.result-card>button{width:100%;font-size:18px}
+.error{color:#c62828;margin:5px 0 12px;font-weight:bold}
+.mini-features{display:flex;justify-content:space-around;gap:10px;margin-top:20px;flex-wrap:wrap;font-size:13px}
+.topbar{display:flex;justify-content:space-between;align-items:center;background:#fff;padding:20px 7%;box-shadow:0 4px 15px #0002}
+.topbar h1{color:#1261a0}
+.topbar small{color:#666}
+.score{background:#ffd43b;padding:13px 24px;border-radius:30px;font-size:21px;font-weight:bold}
+.road{height:130px;background:#3d3d3d;position:relative;overflow:hidden;border-top:8px solid #777;border-bottom:8px solid #777}
+.lane-line{position:absolute;top:57px;left:0;width:100%;border-top:6px dashed white}
+.moving{position:absolute;font-size:45px;z-index:2}
+.car{top:5px;animation:drive 7s linear infinite}
+.bus{top:62px;right:0;animation:back 8s linear infinite}
+.traffic-light{position:absolute;right:3%;top:7px;background:#222;padding:4px 9px;border-radius:10px;font-size:17px;z-index:4}
+@keyframes drive{from{transform:translateX(-150px)}to{transform:translateX(110vw)}}
+@keyframes back{from{transform:translateX(150px)}to{transform:translateX(-110vw)}}
+.game{width:min(850px,92%);margin:28px auto}
+.game-info{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.game-info b{background:#fff;padding:9px 17px;border-radius:20px;color:#1261a0}
+.game-info span{font-size:21px}
+.progress{height:13px;background:#fff;border-radius:20px;overflow:hidden;margin-bottom:18px}
+.progress div{height:100%;background:#18a558;transition:.4s}
+.card{background:#fff;padding:38px;border-radius:27px;box-shadow:0 12px 35px #0002;text-align:center}
+.scenario-icon{font-size:65px}
+.card h2{color:#1261a0;font-size:30px;margin:9px}
+.question{font-size:18px;line-height:1.6;max-width:680px;margin:15px auto}
+.options{display:grid;gap:13px;margin-top:22px}
+.options button{background:#f6fcff;color:#183b57;border:3px solid #dceeff;text-align:left;border-radius:15px}
+.options button:hover:not(:disabled){background:#e2f5ff;border-color:#2196f3}
+.feedback{margin-top:22px;padding:23px;border-radius:18px}
+.feedback.correct{background:#e6faeb;border:2px solid #2eaa50}
+.feedback.wrong{background:#ffe9e9;border:2px solid #dc3545}
+.feedback h3{margin-bottom:9px}
+.feedback p{line-height:1.5;margin-bottom:12px}
+.feedback strong{display:block;font-size:24px;margin:10px}
+.feedback .next{background:#1261a0}
+footer{text-align:center;padding:22px;font-weight:bold}
+.trophy{font-size:85px}
+.result-card{text-align:center;width:min(650px,100%)}
+.result-card h1{color:#1261a0;margin:10px}
+.small{color:#777;margin-top:18px}
+.score-big{font-size:72px;color:#f4b400;font-weight:bold}
+.result-message{margin:18px 0;padding:15px;background:#eef8ff;border-radius:15px}
+.leaderboard{text-align:left;margin-top:25px}
+.leaderboard h2{text-align:center;margin-bottom:12px}
+.rank{display:flex;gap:12px;padding:11px;border-bottom:1px solid #ddd}
+.rank span{flex:1}
+@media(max-width:600px){.hero h1{font-size:42px}.hero>p{font-size:16px}.hero-road{font-size:30px}.topbar{padding:15px}.topbar h1{font-size:21px}.score{padding:10px 15px;font-size:17px}.traffic-light{display:none}.card{padding:24px 17px}.scenario-icon{font-size:52px}.card h2{font-size:25px}.question{font-size:16px}.game-info span{font-size:17px}}
